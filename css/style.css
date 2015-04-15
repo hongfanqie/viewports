@@ -1,0 +1,113 @@
+body {
+  font: 16px/1.8 sans-serif;
+  color: #333;
+}
+
+.wrap {
+  width: 700px;
+  margin: auto;
+}
+
+a {
+  color: #0095dd;
+  text-decoration: none;
+}
+
+a:hover {
+  border-bottom: 1px solid #0095dd;
+}
+
+a:active {
+  background: transparent;
+}
+
+h1 {
+  font-size: 3em;
+}
+
+img {
+  max-width: 100%;
+}
+
+a img {
+  border: 0;
+}
+
+.figure {
+  text-align: center;
+}
+
+.figure img {
+  border: 10px solid #f7f7f7;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+th {
+  text-align: inherit;
+  background: #f7f7f7;
+}
+
+th,
+td {
+  border: 1px solid #ddd;
+  padding: 0.5em 1em;
+  color: #666;
+}
+
+.table {
+  margin: auto -120px;
+}
+
+.textwrap,
+.textwrap td,
+.textwrap th {
+  word-wrap: break-word;
+  word-break: break-all;
+}
+
+blockquote {
+  color: #777;
+  font-weight: 300;
+  border-left: 4px solid #ddd;
+  padding: 0 1em;
+  margin: 1em 3em 1em 2em;
+}
+
+pre,
+code {
+  font-family: Courier, 'Courier New', monospace;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  background: #f7f7f7;
+}
+
+code {
+  font-size: 85%;
+  padding: 0.2em;
+}
+
+pre {
+  border: 1px solid #ddd;
+  padding: 1em 1.5em;
+}
+
+/* sorry IE6 */
+
+pre > code {
+  padding: 0;
+  background: none;
+}
+
+.instruction {
+  color: #666;
+  font-size: 80%;
+}
+
+.instruction code {
+  background: none;
+  font-size: 100%;
+}
