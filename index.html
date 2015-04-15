@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>移动浏览器 viewport 概述 | 红番茄 hongfanqie.org</title>
+  <meta name="description" content="移动浏览器 viewport 相关概念概述。 红番茄 hongfanqie.org，优质的前端资料翻译。" />
+  <meta name="viewport" content="initial-scale=1.0" />
+  <meta name="format-detection" content="telephone=no">
+  <link rel="stylesheet" href="css/highlight.css" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+<div class="wrap">
+<h1 id="移动浏览器-viewport-概述">移动浏览器 viewport 概述</h1>
+<h2 id="译者序">译者序</h2>
+<p>本文由 <a href="http://yanxyz.net/">Ivan Yan</a> 翻译，译文版权<a href="http://creativecommons.org/licenses/by-nc/4.0/">&quot;署名-非商用&quot;</a>，意见<a href="https://github.com/hongfanqie/viewports">反馈</a>。</p>
+<p>注意这是选译，请同时参看<a href="http://www.quirksmode.org/mobile/overview.html">原文</a>。</p>
+<h2 id="正文">正文</h2>
+<p>移动浏览器 viewport 相关概念概述，截止 2013 年 11 月。</p>
+<table class="table">
+  <thead>
+    <tr>
+      <th style="width:100px">概念</th>
+      <th>说明</th>
+      <th style="width:100px">JavaScript</th>
+      <th style="width:100px">Media query</th>
+      <th style="width:120px">Meta viewport</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Physical screen</td>
+      <td>设备屏幕的物理像素数目</td>
+      <td>screen.width（旧）</td>
+      <td>device-width（旧）</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Layout viewport</td>
+      <td>CSS 的初始包含块，常常设置为 ideal viewport 的尺寸。</td>
+      <td class="textwrap">document.documentElement.clientWidth/Height</td>
+      <td>width height</td>
+      <td>width</td>
+    </tr>
+    <tr>
+      <td>Visual viewport</td>
+      <td>页面可见部分</td>
+      <td>window.innerWidth <br />window.innerHeight</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Ideal viewport</td>
+      <td>最佳体验的尺寸</td>
+      <td>screen.width <br /> screen.height</td>
+      <td>device-width <br /> device-height</td>
+      <td>width=device-width</td>
+    </tr>
+    <tr>
+      <td>Resolution</td>
+      <td>物理屏幕尺寸与 Ideal viewport 的比值</td>
+      <td>window.devicePixelRatio</td>
+      <td>resolution</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Orientation</td>
+      <td>设备方向：竖屏（portrait）横屏（landscape）</td>
+      <td>window.orientation</td>
+      <td>orientation</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Zooming</td>
+      <td>页面相对于 ideal viewport 的缩放率</td>
+      <td></td>
+      <td></td>
+      <td>*-scale</td>
+    </tr>
+  </tbody>
+</table>
+<p>目前许多移动浏览器将 <code>screen.width</code> 从物理像素值改为 ideal viewport 的宽度值，参看<a href="http://www.quirksmode.org/blog/archives/2013/11/screenwidth_is.html">此文</a>。后者视为正确。</p>
+<p>所有的 Webkit 浏览器媒体查询使用 <code>-webkit-device-pixel-ratio</code> 而不是 <code>resolution</code>。在后者胜出之前，前者视为正确。</p>
+<p>Meta viewport 的 <code>initial-scale</code> 也会将 layout viewport 的尺寸设为缩放后的 ideal viewport 的尺寸。</p>
+<h2 id="相关文章">相关文章</h2>
+<ul>
+<li><a href="1.html">两个 viewport 的故事 （一）</a></li>
+<li><a href="2.html">两个 viewport 的故事 （二）</a></li>
+<li><a href="3.html">Meta Viewport</a></li>
+</ul>
+</div>
+</body>
+</html>
